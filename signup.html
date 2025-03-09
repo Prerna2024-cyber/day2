@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add CSS for styling -->
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Signup</h2>
+        <form id="signup-form">
+            <label for="signup-type">Signup as:</label>
+            <select id="signup-type">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Signup</button>
+        </form>
+        <p id="signup-message" style="color: red;"></p>
+    </div>
+    
+    <script src="signup.js"></script>
+</body>
+</html>
+
