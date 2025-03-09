@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add CSS for styling -->
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="login-type">Login as:</label>
+            <select id="login-type">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+    
+    <script>
+        document.getElementById("login-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const loginType = document.getElementById("login-type").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            const apiEndpoint = loginType === "admin" 
+                ? "http://localhost:3000/api/v1/admin/signin" 
+                : "http://localhost:3000/api/v1/user/signin";
+
+            try {
+                const response = await fetch(apiEndpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    localStorage.setItem("token", data.token);
+                    alert(`Login successful as ${loginType}!`);
+                    window.location.href = loginType === "admin" ? "admin.html" : "user.html";
+                } else {
+                    errorMessage.textContent = data.error || "Invalid email or password.";
+                }
+            } catch (error) {
+                errorMessage.textContent = "Error connecting to server.";
+                console.error("Error:", error);
+            }
+        });
+    </script>
+</body>
+</html>
