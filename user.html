@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add CSS for styling -->
+</head>
+<body>
+    <div class="user-container">
+        <h2>Welcome, User</h2>
+        <button id="logout">Logout</button>
+
+        <h3>Available Hackathons</h3>
+        <ul id="available-hackathons">
+            <!-- List of available hackathons will be dynamically added here -->
+        </ul>
+
+        <h3>Participated Hackathons</h3>
+        <ul id="participated-hackathons">
+            <!-- List of hackathons will be dynamically added here -->
+        </ul>
+
+        <h3>Submit Your Project</h3>
+        <form id="submit-project-form">
+            <label for="hackathon-select">Select Hackathon:</label>
+            <select id="hackathon-select" required>
+                <!-- Hackathons user participated in will be populated here -->
+            </select>
+
+            <label for="github-link">GitHub Repository Link:</label>
+            <input type="url" id="github-link" placeholder="Enter your project link" required>
+
+            <button type="submit">Submit Project</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script src="user.js"></script> <!-- Include JavaScript for functionality -->
+</body>
+</html>
