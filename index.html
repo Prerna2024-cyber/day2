@@ -6,6 +6,28 @@
     <title>Hackathon Platform</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <!-- making changes -->
+    <title>Image Boxes</title>
+    <style>
+        .image-container {
+            display: flex;
+            gap: 20px; /* Space between images */
+            justify-content: center;
+        }
+
+        .image-box img {
+            width: 100%;  /* Makes image take full width of the box */
+            height: 100%; /* Makes image take full height of the box */
+            object-fit: cover; /* Ensures the image fills the box without distortion */
+            border-radius: 10px;
+        }
+
+        .image-box img {
+            width: 150px;
+            border-radius: 10px;
+        }
+    </style>
+    <!-- end -->
 </head>
 
 
@@ -28,140 +50,74 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="
-        max-width: 1100px; 
-        margin:40px auto; 
-        padding: 50px; 
-        background-color: #f8f9fa; /* Light background */
-        border: 1px solid #ccc; /* Border */
-        border-radius: 15px; /* Rounded corners */
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
-        text-align: center;">
-        <h1 class="floating-text" style="font-size: 100px; color: rgb(32, 14, 14);">
-            Join the Ultimate <br> Hackathon Challenge!
-        </h1>
-        <p style="font-size: 40px;">Innovate, Collaborate, and Compete to Win Exciting Prizes.</p>
-        <a href="#hackathons" class="btn" 
-        style="font-size: 50px; padding: 20px 50px; font-weight: bold; 
-                color: rgb(77, 156, 221);">
-        Explore Hackathons
-        </a>
-    
-    </section>
+<section class="hero">
+    <h1 class="floating-text">
+        Join the Ultimate <br> Hackathon Challenge!
+    </h1>
+    <p><b>Innovate, Collaborate, and Compete to Win Exciting Prizes.</b></p>
 
-    <!-- About Section -->
-    <section id="about" class="section" style="
-    max-width: 900px; 
-    margin: 50px auto; 
-    padding: 30px; 
-    background-color: #f8f9fa; /* Light background */
-    border: 2px solid #ccc; /* Border */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    text-align: center;">
-    
-    <h1 style="font-size: 60px; margin-bottom: 20px;">About Us</h1>
-    
-    <h3 style="font-size: 24px; line-height: 1.6;">
-        Welcome to 100xHackathon, where creativity meets technology! <br><br>
-        We provide a space for developers, designers, and entrepreneurs to collaborate, innovate, and compete in world-class hackathons. <br><br>
-        Whether you're a beginner or a pro, our platform helps you learn, build, and showcase your skills to a global audience.
+    <a href="#hackathons" class="btn">Explore Hackathons</a>
+</section>
+
+
+   <!-- About Section -->
+<section id="about" class="section">
+
+
+
+<!-- Content -->
+    <h1 style="font-size: 60px; margin-bottom: 20px; position: relative; z-index: 1;">About Us</h1>
+
+    <h3 style="font-size: 24px; line-height: 1.6; position: relative; z-index: 1;">
+    Welcome to <b>100xHackathon</b>, where creativity meets technology! <br><br>
+    We provide a space for developers, designers, and entrepreneurs to collaborate, innovate, and compete in world-class hackathons. <br><br>
+    Whether you're a beginner or a pro, our platform helps you learn, build, and showcase your skills to a global audience.
     </h3>
-    </section>
-
-    <div class="about-images" style="
-    max-width: 800px; 
-    margin: 30px auto; 
-    padding: 20px; 
-    background-color: #f8f9fa; /* Light background */
-    border: 2px solid #ccc; /* Border */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    ">
-    <img src="smile2.png" alt="Hackathon Image 2" style="width: 150px; border-radius: 10px;">
-    <img src="smile3.png" alt="Hackathon Image 3" style="width: 150px; border-radius: 10px;">
-    <img src="smile4.png" alt="Hackathon Image 4" style="width: 150px; border-radius: 10px;">
-    </div>
+</section>
 
 
+    <!-- <div class="image-container">
+        <div class="image-box">
+            <img src="image (2).png" alt="Hackathon Image 2">
+        </div>
+        <div class="image-box">
+            <img src="image (3).png" alt="Hackathon Image 3">
+        </div>
+        <div class="image-box">
+            <img src="image (4).png" alt="Hackathon Image 4">
+        </div>
+    </div> -->
+
+
+    
     <!-- Features Section -->
-    <!-- Features Section -->
-    <section id="features" class="section" style="
-    max-width: 900px; 
-    margin: 50px auto; 
-    padding: 30px; 
-    background-color: #f8f9fa; /* Light background */
-    border: 2px solid #ccc; /* Border */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    text-align: center;">
-        <h2 style="font-size: 40px; font-weight: bold;text-align: center; ">Why Join Us?</h2>
+    <section id="features" class="section">
+        <h2 class="section-title">Why Join Us?</h2>
         <div class="features-container">
-            <div class="feature-card" style="
-        font-size: 30px;  /* Makes text bigger */
-        padding: 30px 50px; /* Adds more space inside */
-        width: 350px; /* Controls card width */
-        text-align: center; /* Centers text */
-        font-weight: bold; /* Makes text bold */
-        background-color: lightblue; /* Adds background */
-        border-radius: 10px; /* Smooth corners */
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
-        ">
-        🌍 Global Competitions
-        </div>
-
-            <p style="font-size: 24px; font-weight: bold; text-align: center; ">🌍 A     Stage for Global Talent
-                Hackathons connect you with international mentors, sponsors, and tech communities. Compete on a global scale and launch your career to new heights!</p>
-                <div class="features-container">
-                    <div class="feature-card" style="
-                font-size: 30px;  /* Makes text bigger */
-                padding: 30px 50px; /* Adds more space inside */
-                width: 350px; /* Controls card width */
-                text-align: center; /* Centers text */
-                font-weight: bold; /* Makes text bold */
-                background-color: lightblue; /* Adds background */
-                border-radius: 10px; /* Smooth corners */
-                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
-                ">
-                🏆 Exciting Prizes
-                </div>
-            <p style="font-size: 24px; font-weight: bold;">🏆Compete in thrilling hackathons and stand a chance to win amazing prizes! From cash rewards and tech gadgets to exclusive mentorship opportunities, our competitions offer more than just victory—they offer a launchpad for your future!</p>
-                <div class="features-container">
-                    <div class="feature-card" style="
-                font-size: 30px;  /* Makes text bigger */
-                padding: 30px 50px; /* Adds more space inside */
-                width: 350px; /* Controls card width */
-                text-align: center; /* Centers text */
-                font-weight: bold; /* Makes text bold */
-                background-color: lightblue; /* Adds background */
-                border-radius: 10px; /* Smooth corners */
-                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
-                ">
-                👨‍💻 Networking with Top Developers
-                </div>
-            <p style="font-size: 24px; font-weight: bold;">👨‍💻Connect with industry-leading developers, engineers, and tech innovators! Hackathons provide a unique opportunity to collaborate, learn, and grow your network with top talent from around the world.</p>
-                <div class="features-container">
-                    <div class="feature-card" style="
-                font-size: 30px;  /* Makes text bigger */
-                padding: 30px 50px; /* Adds more space inside */
-                width: 350px; /* Controls card width */
-                text-align: center; /* Centers text */
-                font-weight: bold; /* Makes text bold */
-                background-color: lightblue; /* Adds background */
-                border-radius: 10px; /* Smooth corners */
-                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
-                ">
-               🚀 Career Opportunities
-                </div>
-            <p style="font-size: 24px; font-weight: bold;">🚀Boost your career by showcasing your skills to top companies and recruiters! Hackathons open doors to job offers, internships, and startup opportunities, helping you take the next big step in your professional journey.</p>
-           
+            
+            <div class="feature">
+                <h3>🌍 Global Competitions</h3>
+                <p>Compete with international mentors, sponsors, and tech communities. Launch your career to new heights!</p>
+            </div>
+    
+            <div class="feature">
+                <h3>🏆 Exciting Prizes</h3>
+                <p>Win cash rewards, tech gadgets, and exclusive mentorship opportunities that go beyond just victory.</p>
+            </div>
+    
+            <div class="feature">
+                <h3>👨‍💻 Networking with Top Developers</h3>
+                <p>Connect with industry-leading engineers and innovators. Hackathons help you grow your network globally.</p>
+            </div>
+    
+            <div class="feature">
+                <h3>🚀 Career Opportunities</h3>
+                <p>Showcase your skills to top companies and recruiters. Get job offers, internships, and startup opportunities.</p>
+            </div>
+    
         </div>
     </section>
+    
 
     <!-- Hackathons Section -->
     <section id="hackathons" class="section">
@@ -176,10 +132,31 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>Email: support@100xhackathon.com</p>
-    </section>
+  <section id="contact" class="contact-section">
+    <h2 class="contact-title">Get in Touch</h2>
+    <p class="contact-subtitle">Have questions? Reach out to us!</p>
+
+    <div class="contact-info">
+        <p>📧 Email: <a href="mailto:support@100xhackathon.com">support@100xhackathon.com</a></p>
+        <p>📍 Location: Banasthali vidyapith</p>
+        <p>📞 Phone: +1 (555) 123-4567</p>
+    </div>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-links">
+        <a href="#" class="social-icon">🔗 LinkedIn</a>
+        <a href="#" class="social-icon">🐦 Twitter</a>
+        <a href="#" class="social-icon">📘 Facebook</a>
+        <a href="#" class="social-icon">🐙 GitHub</a>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
