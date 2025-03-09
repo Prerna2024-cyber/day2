@@ -1,0 +1,547 @@
+/* General Styles */
+body {
+    padding-top: 20px; /* Keep only if needed */
+    background-color: #7ab2e0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Make sure the text is readable */
+.floating-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(19, 154, 188); /* Change if needed */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background: #1a1a2e;
+    color: #91b7ca;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #83b6ca;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('your-image.png') no-repeat center center/cover;
+    color: rgb(11, 5, 5);
+}
+
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Sections */
+.section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgb(113, 209, 234);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+/* Hackathons */
+#hackathon-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+    background: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Leaderboard */
+#leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.leaderboard-item {
+    background: #ffcc00;
+    padding: 15px;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Primary Buttons (Blue - Login) */
+.btn-primary {
+    background: #007bff;
+    color: rgb(12, 11, 11);
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+/* Success Buttons (Green - Register) */
+.btn-success {
+    background: #28a745;
+    color: #130f0f;
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+/* Warning Buttons (Orange - General Buttons) */
+.btn-warning {
+    background: #ff5733;
+    color: rgb(16, 15, 15);
+}
+
+.btn-warning:hover {
+    background: #e64a19;
+}
+
+/* Forms */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0f0e0e;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Login Page */
+.login-container, .register-container {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #c1dff0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Admin Dashboard */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+.form-container {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #130c0c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0b0a0a;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #b02a37;
+}
+
+.btn-success {
+    background: #28a745;
+    color: white;
+    border: none;
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+.hackathon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hackathon-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.hackathon-item h3 {
+    margin: 10px 0;
+}
+
+
+/* Admin Hackathon List */
+#admin-hackathon-list {
+    margin: 20px 0;
+}
+
+.hackathon-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* User Dashboard from this to */
+.hackathon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hackathon-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.hackathon-item h3 {
+    margin: 10px 0;
+}
+/*till this*/
+/* Submission Form */
+#submission-form {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#submission-form select, input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#submission-form button {
+    width: 100%;
+}
+/* adding changes*/
+.floating-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+/*making text in color*/
+
+@keyframes rainbow {
+    0% { color: #ff5733; }
+    25% { color: #ffcc00; }
+    50% { color: #33ff57; }
+    75% { color: #3399ff; }
+    100% { color: #ff5733; }
+}
+
+h1 {
+    animation: rainbow 3s infinite;
+}
+
+.floating-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #3333ff);
+    animation: floatText 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes floatText {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.about-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Adds space between images */
+    flex-wrap: wrap; /* Ensures images wrap on small screens */
+    margin-top: 20px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+ 
+/*singup*/
+.signup-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#signup-message {
+    margin-top: 10px;
+}
+
+/*for admin*/
+.admin-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+label {
+    font-weight: bold;
+}
+
+#logout {
+    background-color: red;
+}
+
+
+/*for user*/
+/* Container for the form */
+.user-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+/* Headings */
+h2, h3 {
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Input Fields */
+input, select, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+}
+
+/* Logout Button */
+#logout {
+    background-color: red;
+    font-weight: bold;
+}
+
+#logout:hover {
+    background-color: darkred;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
