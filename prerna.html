@@ -5,45 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style1.css"> <!-- Linking external CSS -->
+    <link rel="stylesheet" href="prerna.css"> <!-- Linking external CSS -->
 </head>
 <body>
     <div class="admin-container">
-        <h2>Welcome, Admin</h2>
+        <h2>Welcome, Admin 👋</h2>
         <button id="logout">Logout</button>
         
-        <div id="auth-container">
-            <h3>Admin Authentication</h3>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
-            <button id="auth-submit">Authenticate</button>
-        </div>
-        
         <h3>Create Hackathon</h3>
-        <form id="create-hackathon-form">
-            <label for="title">Title:</label>
-            <input type="text" id="title" required>
-
-            <label for="description">Description:</label>
-            <textarea id="description" required></textarea>
-
-            <label for="prize">Prize Amount:</label>
-            <input type="number" id="prize" required>
-
-            <label for="start-date">Start Date:</label>
-            <input type="date" id="start-date" required>
-
-            <label for="submission-date">Submission Date:</label>
-            <input type="date" id="submission-date" required>
-
-            <button type="submit">Create Hackathon</button>
+        <form>
+            <div class="form-group">
+            <h3>Enter email and password</h3>
+            <input type="email" id="admin-email" placeholder="Enter Email" required>
+            <input type="password" id="admin-password" placeholder="Enter Password" required>
+            </div>
+            <div class="form-group">
+                <label>Title:</label>
+                <input type="text" placeholder="Enter hackathon title">
+            </div>
+            <div class="form-group">
+                <label>Description:</label>
+                <textarea placeholder="Enter description"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Prize Amount:</label>
+                <input type="number" placeholder="Enter prize amount">
+            </div>
+            <div class="form-group">
+                <label>Start Date:</label>
+                <input type="date">
+            </div>
+            <div class="form-group">
+                <label>Submission Date:</label>
+                <input type="date">
+            </div>
+            <button class="btn">Create Hackathon</button>
         </form>
         
         <h3>All Hackathons</h3>
         <button id="fetch-hackathons">Show My Hackathons</button>
         <ul id="hackathon-list"></ul>
+
+        <!-- Popup Login Form -->
+        <div id="login-popup" class="popup">
+            <div class="popup-content">
+            <h3>Enter email and password</h3>
+            <input type="email" id="admin-email" placeholder="Enter Email" required>
+            <input type="password" id="admin-password" placeholder="Enter Password" required>
+            <button id="login-btn">show hackathon</button>
+            <button id="close-btn">Close</button>
+            </div>
+        </div>
+        <script>
+            document.getElementById("fetch-hackathons").addEventListener("click", function () {
+                document.getElementById("login-popup").style.display = "block"; // Show login popup
+            });
+            
+            document.getElementById("close-btn").addEventListener("click", function () {
+                document.getElementById("login-popup").style.display = "none"; // Hide popup
+            });
+            
+            document.getElementById("login-btn").addEventListener("click", function () {
+                const email = document.getElementById("admin-email").value;
+                const password = document.getElementById("admin-password").value;
+            
+                // Hardcoded credentials for testing
+                const adminEmail = "admin@example.com";
+                const adminPassword = "admin123";
+            
+                if (email === adminEmail && password === adminPassword) {
+                    alert("Login Successful! Showing Hackathons...");
+                    document.getElementById("login-popup").style.display = "none"; // Hide popup
+            
+                    // Display hackathons (replace this with your actual logic)
+                    document.getElementById("hackathon-list").innerHTML = "<li>Hackathon 1</li><li>Hackathon 2</li>";
+                } else {
+                    alert("Invalid Email or Password!");
+                }
+            });
+        </script>
+            <!-- end of popup styling for show hackathon -->
+          
+            
         
         <p id="message"></p>
     </div>
