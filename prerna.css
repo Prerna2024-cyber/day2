@@ -1,79 +1,65 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Centering the Admin Container */
 body {
+    background-image: url('background.jpg'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #59afaf;
 }
 
-/* Styling the Admin Dashboard */
 .admin-container {
-    background: white;
+    background: rgb(146, 204, 240);
     padding: 20px;
-    width: 400px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 350px;
 }
 
-/* Headings */
 h2 {
-    color: #333;
-    margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-h3 {
-    margin-top: 15px;
-    color: #555;
-}
-
-/* Input Fields */
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Buttons */
 button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     width: 100%;
-    margin-top: 10px;
-    transition: background 0.3s ease;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
-button:hover {
-    background-color: #0056b3;
+#logout {
+    background-color: #ff4d4d;
+    color: white;
 }
 
-/* Hackathon List */
-ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
+#logout:hover {
+    background-color: #cc0000;
 }
 
-ul li {
-    background: #f8f8f8;
-    padding: 8px;
-    border-radius: 5px;
-    margin-top: 5px;
+#create-hackathon-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+#create-hackathon-btn:hover {
+    background-color: #92b3d6;
+}
+
+#show-hackathons-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+#show-hackathons-btn:hover {
+    background-color: #1e7e34;
 }
 
 /* Popup Styling */
@@ -83,13 +69,76 @@ ul li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: rgb(120, 150, 214);
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+    z-index: 1000;
 }
-.popup-content {
+
+button.close-btn {
+    background-color: red;
+    color: rgb(15, 12, 12);
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button.close-btn:hover {
+    background-color: darkred;
+}
+
+#create-hackathon-form {
+    display: none;
+    background-color: blue;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.upper-container {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    color: white;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center buttons */
+    gap: 10px; /* Add space between buttons */
+}
+
+.admin-section,.hackathon-section {
+    margin-bottom: 100px; /* Extra space between these sections */
+}
+/* haddd */
+#hackathon-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 15px; /* Adds spacing between fields */
+    align-items: center; /* Centers the form */
+    background: rgb(120, 150, 214); /* Keep the blue background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px; /* Prevents excessive stretching */
+}
+
+.form-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: white;
 }
