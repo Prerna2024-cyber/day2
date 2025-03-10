@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style1.css"> <!-- Linking external CSS -->
+</head>
+<body>
+    <div class="admin-container">
+        <h2>Welcome, Admin</h2>
+        <button id="logout">Logout</button>
+        
+        <div id="auth-container">
+            <h3>Admin Authentication</h3>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button id="auth-submit">Authenticate</button>
+        </div>
+        
+        <h3>Create Hackathon</h3>
+        <form id="create-hackathon-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" required></textarea>
+
+            <label for="prize">Prize Amount:</label>
+            <input type="number" id="prize" required>
+
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" required>
+
+            <label for="submission-date">Submission Date:</label>
+            <input type="date" id="submission-date" required>
+
+            <button type="submit">Create Hackathon</button>
+        </form>
+        
+        <h3>All Hackathons</h3>
+        <button id="fetch-hackathons">Show My Hackathons</button>
+        <ul id="hackathon-list"></ul>
+        
+        <p id="message"></p>
+    </div>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
